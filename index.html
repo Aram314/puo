@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PUO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="main.js"></script>
+  <script async src="https://telegram.org/js/telegram-widget.js?19" data-telegram-post="The_Gentlemen_2019hd/14" data-width="100%"></script>
+  <style>
+    .table {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+<div class="container mt-3 d-flex flex-column">
+  <div class="row">
+    <div class="col">
+      <div class="mb-3 col-md-auto">
+        <label for="hu" class="form-label">Himnakan ughutyun</label>
+        <input type="number" class="form-control" id="hu" placeholder="himnakan ughutyun">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="xKrakayin" class="form-label">xKrakayin</label>
+        <input type="number" class="form-control" id="xKrakayin" placeholder="xKrakayin">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="yKrakayin" class="form-label">yKrakayin</label>
+        <input type="number" class="form-control" id="yKrakayin" placeholder="yKrakayin">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="xDitaket" class="form-label">xDitaket</label>
+        <input type="number" class="form-control" id="xDitaket" placeholder="xDitaket">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="yDitaket" class="form-label">yDitaket</label>
+        <input type="number" class="form-control" id="yDitaket" placeholder="yDitaket">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="heravorutyun" class="form-label">heravorutyun</label>
+        <input type="number" class="form-control" id="heravorutyun" placeholder="heravorutyun">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="ankyun" class="form-label">ankyun</label>
+        <input type="number" class="form-control" id="ankyun" placeholder="ankyun">
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-success mt-3 justify-content-center" onclick="execute1()">Hashvel</button>
+  <div class="row">
+    <div class="col-6">
+      <button type="button" class="btn btn-danger mt-3" onclick="clear1()">Clear</button>
+    </div>
+    <div class="col-6">
+      <button type="button" class="btn btn-danger mt-3" onclick="clearAll()">Clear All</button>
+    </div>
+  </div>
+  <table class="mt-4 table">
+    <tr>
+      <td>x nshanaket</td>
+      <td id="xNshanaket"></td>
+    </tr>
+    <tr>
+      <td>y nshanaket</td>
+      <td id="yNshanaket"></td>
+    </tr>
+    <tr>
+      <td>heravorutyun</td>
+      <td id="dalnost"></td>
+    </tr>
+    <tr>
+      <td>himnakan ughutyunic</td>
+      <td id="himnakanUghutyunic"></td>
+    </tr>
+  </table>
+</div>
+<script>
+  document.getElementById('hu') && (document.getElementById('hu').value = localStorage.getItem('hu'));
+  document.getElementById('xDitaket') && (document.getElementById('xDitaket').value = localStorage.getItem('xDitaket'));
+  document.getElementById('yDitaket') && (document.getElementById('yDitaket').value = localStorage.getItem('yDitaket'));
+  document.getElementById('xKrakayin') && (document.getElementById('xKrakayin').value = localStorage.getItem('xKrakayin'));
+  document.getElementById('yKrakayin') && (document.getElementById('yKrakayin').value = localStorage.getItem('yKrakayin'));
+</script>
+</body>
+</html>
