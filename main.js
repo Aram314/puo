@@ -20,6 +20,7 @@ const clear1 = () => {
   document.getElementById('yNshanaket').value = null;
   document.getElementById('dalnost').value = null;
   document.getElementById('himnakanUghutyunic').value = null;
+  document.getElementById('table').style.display = 'none';
 }
 
 const clearAll = () => {
@@ -29,6 +30,7 @@ const clearAll = () => {
   document.getElementById('hu').value = null;
   document.getElementById('xDitaket').value = null;
   document.getElementById('yDitaket').value = null;
+  document.getElementById('table').style.display = 'none';
   document.getElementById('xKrakayin').value = null;
   document.getElementById('yKrakayin').value = null;
   document.getElementById('xNshanaket').value = null;
@@ -128,6 +130,8 @@ const execute1 = () => {
   document.getElementById('yNshanaket').innerHTML = Math.round(yn);
   document.getElementById('dalnost').innerHTML = Math.round(distance);
   document.getElementById('himnakanUghutyunic').innerHTML = ankyun;
+
+  document.getElementById('table').style.display = 'block';
 
   return { xn, yn, distance, ankyun }
 }
