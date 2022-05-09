@@ -105,7 +105,7 @@ const execute1 = () => {
   let davarot;
 
   if (qar === 1 || qar === 3) {
-    davarot = Math.atan(ay * (yn - yk) / ax * (xn - xk));
+    davarot = Math.atan((ay * (yn - yk)) / (ax * (xn - xk)));
   }
 
   if (qar === 2 || qar === 4) {
