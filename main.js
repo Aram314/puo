@@ -102,10 +102,6 @@ const execute1 = () => {
     yn = ay * r * Math.sin(toRadians(horizontalAngle)) + yd;
   }
 
-  console.log(qar, ':: qar ::')
-
-  // console.log(document.getElementById('heravorutyun').value)
-
   const distance = Math.sqrt(Math.pow(xn - xk, 2) + Math.pow(yn - yk, 2));
 
   let davarot;
