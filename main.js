@@ -107,19 +107,22 @@ const execute1 = () => {
   let davarot;
 
   if (qar === 1 || qar === 3) {
-    davarot = Math.atan((ay * (yn - yk)) / (ax * (xn - xk)));
+    davarot = Math.atan((yn - yk) / (xn - xk));
   }
 
   if (qar === 2 || qar === 4) {
-    davarot = Math.atan((ax * (xn - xk)) / (ay * (yn - yk)));
+    davarot = Math.atan((xn - xk) / (yn - yk));
   }
 
   davarot = toDegrees(davarot);
 
   davarot = davarot / 0.06;
 
-  const ankyun = (Math.round((fixed + davarot) - hu) / 100).toFixed(2);
+  if (qar === 2 || qar === 4) {
+    davarot = -1 * davarot;
+  }
 
+  const ankyun = (Math.round((fixed + davarot) - hu) / 100).toFixed(2);
 
   console.log({ xn, yn, distance, ankyun })
   localStorage.setItem('hu', hu.toString());
