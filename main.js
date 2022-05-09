@@ -50,28 +50,32 @@ const execute1 = () => {
 
   let fixed, qar, ax, ay;
 
-  if (hu >= 5250 && hu <= 6000 || hu >= 0 && hu < 750) {
+  // if (hu >= 5250 && hu <= 6000 || hu >= 0 && hu < 750) {
+  if (hu >= 0 && hu < 1500) {
     qar = 1;
     ax = 1;
     ay = 1;
     fixed = 0;
   }
 
-  if (hu >= 750 && hu < 2250) {
+  // if (hu >= 750 && hu < 2250) {
+  if (hu >= 1500 && hu < 3000) {
     qar = 2;
     ax = -1;
     ay = 1;
     fixed = 1500;
   }
 
-  if (hu >= 2250 && hu < 3750) {
+  // if (hu >= 2250 && hu < 3750) {
+  if (hu >= 3000 && hu < 4500) {
     qar = 3;
     ax = -1;
     ay = -1;
     fixed = 3000;
   }
 
-  if (hu >= 3750 && hu < 5250) {
+  // if (hu >= 3750 && hu < 5250) {
+  if (hu >= 4500 && hu < 6000) {
     qar = 4;
     ax = 1;
     ay = -1;
@@ -98,7 +102,9 @@ const execute1 = () => {
     yn = ay * r * Math.sin(toRadians(horizontalAngle)) + yd;
   }
 
-  console.log(document.getElementById('heravorutyun').value)
+  console.log(qar, ':: qar ::')
+
+  // console.log(document.getElementById('heravorutyun').value)
 
   const distance = Math.sqrt(Math.pow(xn - xk, 2) + Math.pow(yn - yk, 2));
 
